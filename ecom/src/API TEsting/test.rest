@@ -1,0 +1,110 @@
+###
+POST http://localhost:8080/addProduct
+Content-Type: application/json
+
+[
+  {
+    "productName": "Narzo 30 Pro",
+    "productBrand": "Realme",
+    "productDescription": "Narzo 30 Pro 5G is a budget 5G smartphone from Realme. It is powered by the MediaTek Dimensity 800U SoC and comes with up to 8GB of RAM and 128GB of storage. It has a 6.5-inch Full-HD+ display with a 120Hz refresh rate.",
+    "productPrice": 16999,
+    "productQuantity": 100,
+    "productImageName": "narzo_30_pro.jpg",
+    "productCategory": "Mobile",
+    "releaseDate": "2021-02-24",
+    "isAvailable": true
+  },
+  {
+    "productName": "Redmi Note 12 Pro",
+    "productBrand": "Xiaomi",
+    "productDescription": "Redmi Note 12 Pro offers a 6.67-inch AMOLED display, powered by the MediaTek Dimensity 1080 SoC. It comes with up to 8GB RAM, 256GB storage, and a 5000mAh battery.",
+    "productPrice": 24999,
+    "productQuantity": 150,
+    "productImageName": "redmi_note_12_pro.jpg",
+    "productCategory": "Mobile",
+    "releaseDate": "2023-01-05",
+    "isAvailable": true
+  },
+  {
+    "productName": "Galaxy S21 FE",
+    "productBrand": "Samsung",
+    "productDescription": "Samsung Galaxy S21 FE is a premium smartphone with a 6.4-inch AMOLED display, Exynos 2100 chipset, and a triple camera setup. It supports wireless charging and IP68 rating.",
+    "productPrice": 49999,
+    "productQuantity": 50,
+    "productImageName": "galaxy_s21_fe.jpg",
+    "productCategory": "Mobile",
+    "releaseDate": "2022-01-11",
+    "isAvailable": true
+  },
+  {
+    "productName": "MacBook Air M2",
+    "productBrand": "Apple",
+    "productDescription": "Apple MacBook Air with M2 chip, 8GB RAM, 256GB SSD, and a 13.6-inch Retina display. Sleek design with exceptional battery life.",
+    "productPrice": 124900,
+    "productQuantity": 30,
+    "productImageName": "macbook_air_m2.jpg",
+    "productCategory": "Laptop",
+    "releaseDate": "2022-06-15",
+    "isAvailable": true
+  },
+  {
+    "productName": "Inspiron 15 3000",
+    "productBrand": "Dell",
+    "productDescription": "Dell Inspiron 15 3000 features a 15.6-inch Full-HD display, Intel Core i5 11th Gen, 8GB RAM, and 512GB SSD. Ideal for students and professionals.",
+    "productPrice": 52999,
+    "productQuantity": 200,
+    "productImageName": "inspiron_15_3000.jpg",
+    "productCategory": "Laptop",
+    "releaseDate": "2023-03-10",
+    "isAvailable": true
+  },
+  {
+    "productName": "Pavilion 14",
+    "productBrand": "HP",
+    "productDescription": "HP Pavilion 14 comes with a 14-inch Full-HD display, AMD Ryzen 5, 16GB RAM, and 512GB SSD. Lightweight and powerful performance.",
+    "productPrice": 61999,
+    "productQuantity": 120,
+    "productImageName": "hp_pavilion_14.jpg",
+    "productCategory": "Laptop",
+    "releaseDate": "2022-12-01",
+    "isAvailable": true
+  },
+  {
+    "productName": "AirPods Pro 2",
+    "productBrand": "Apple",
+    "productDescription": "Apple AirPods Pro 2 with active noise cancellation, spatial audio, and improved battery life. Designed for ultimate sound clarity.",
+    "productPrice": 24999,
+    "productQuantity": 300,
+    "productImageName": "airpods_pro_2.jpg",
+    "productCategory": "Headphone",
+    "releaseDate": "2022-09-23",
+    "isAvailable": true
+  },
+  {
+    "productName": "WH-1000XM4",
+    "productBrand": "Sony",
+    "productDescription": "Sony WH-1000XM4 over-ear headphones with industry-leading noise cancellation, 30-hour battery life, and superior sound quality.",
+    "productPrice": 29999,
+    "productQuantity": 80,
+    "productImageName": "sony_wh_1000xm4.jpg",
+    "productCategory": "Headphone",
+    "releaseDate": "2020-08-06",
+    "isAvailable": true
+  },
+  {
+    "productName": "Bose QuietComfort 45",
+    "productBrand": "Bose",
+    "productDescription": "Bose QuietComfort 45 headphones with exceptional noise cancellation, comfortable design, and up to 24 hours of battery life.",
+    "productPrice": 32999,
+    "productQuantity": 60,
+    "productImageName": "bose_qc_45.jpg",
+    "productCategory": "Headphone",
+    "releaseDate": "2021-09-15",
+    "isAvailable": true
+  }
+]
+
+###
+GET http://localhost:8080/product
+###
+GET http://localhost:8080/search/Laptop
