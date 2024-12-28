@@ -40,8 +40,9 @@ public void addProduct(@RequestPart("entity") String entity, @RequestPart("fileI
     public List<ecomModel> getAllproduct() {
         return ecomService.getAllProduct();
     }
-    @GetMapping("search/{device}")
+    @GetMapping("product/category/{device}")
     public List<ecomModel> Search(@PathVariable String device) {
+        System.out.println(ecomService.searchProduct(device));
         return ecomService.searchProduct(device);
     }
 

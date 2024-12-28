@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ecom.ecom.model.ecomModel;
+
+import jakarta.transaction.Transactional;
+
 import com.ecom.ecom.Repo.ecomRepo;
 
 @Service
@@ -21,7 +24,6 @@ public class ecomService {
         try {
             product.setImage(fileImage.getBytes());
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         ecomRepo.save(product);
@@ -29,6 +31,7 @@ public class ecomService {
     public List<ecomModel> getAllProduct(){
         return ecomRepo.findAll();
     }
+    @Transactional
     public List<ecomModel> searchProduct(String device){
         return ecomRepo.findByproductCategory(device);
     }
