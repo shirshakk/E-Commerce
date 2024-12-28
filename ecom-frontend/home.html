@@ -136,7 +136,7 @@
                     <a href="#" class="category-link" data-category="Headphone">Headphone</a>
                 </div>
             </li>
-            <li><a href="/add-product.html">Add Product</a></li>
+            <li><a href="index.html">Add Product</a></li>
         </ul>
     </div>
 
@@ -182,13 +182,17 @@ document.querySelectorAll('.category-link').forEach(link => {
         console.log(e);
         e.preventDefault();
         const category = e.target.dataset.category;
-        fetchProduct(`http://localhost:8080/category/${category}`);
+        fetchProduct(`http://localhost:8080/product/category/${category}`);
     });
 });
 
 document.getElementById('homeLink').addEventListener('click', (e) => {
     e.preventDefault();
     fetchProduct();
+});
+document.getElementById('searchInput').addEventListener('input', (e) => {
+    const searchQuery = e.target.value;
+    fetchProduct(`http://localhost:8080/product/search?query=${searchQuery}`);
 });
 
 fetchProduct(); 

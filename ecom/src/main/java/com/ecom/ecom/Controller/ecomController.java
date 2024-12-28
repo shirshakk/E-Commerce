@@ -16,6 +16,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -42,8 +44,12 @@ public void addProduct(@RequestPart("entity") String entity, @RequestPart("fileI
     }
     @GetMapping("product/category/{device}")
     public List<ecomModel> Search(@PathVariable String device) {
-        System.out.println(ecomService.searchProduct(device));
-        return ecomService.searchProduct(device);
+        return ecomService.searchCategory(device);
     }
-
+    @GetMapping("/product/search")
+    public List<ecomModel> getMethodName(@RequestParam("query") String query) {
+        System.out.println(query);
+        return ecomService.searchProduct(query);
+    }
+    
 }

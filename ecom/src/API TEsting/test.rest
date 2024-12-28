@@ -107,4 +107,6 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/product
 ###
-GET http://localhost:8080/category/Mobile
+GET http://localhost:8080/product/category/Laptop
+###
+GET http://localhost:8080/product/search?query=Realme

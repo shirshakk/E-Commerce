@@ -10,4 +10,5 @@ import java.util.List;
 @Repository
 public interface ecomRepo extends JpaRepository<ecomModel, Integer> {
     List<ecomModel> findByproductCategory(String productCategory);
+    List<ecomModel> findByproductBrand(String productBrand);
 }

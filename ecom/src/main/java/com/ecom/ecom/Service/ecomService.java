@@ -32,7 +32,11 @@ public class ecomService {
         return ecomRepo.findAll();
     }
     @Transactional
-    public List<ecomModel> searchProduct(String device){
+    public List<ecomModel> searchCategory(String device){
         return ecomRepo.findByproductCategory(device);
+    }
+    @Transactional
+    public List<ecomModel> searchProduct(String query) {
+        return ecomRepo.findByproductBrand(query);
     }
 }
